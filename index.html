@@ -33,6 +33,7 @@
             <li><a href="#ourServices">Services</a></li>
             <li><a href="#testimonial">Testimonial</a></li>
             <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href=" javascript:void(0)"><i class="themeSwitch"></i></a></li>
         </ul>
         <div class="hamburger" id="hamburger">
             <i class="fas fa-bars fa-3x"></i>
@@ -64,7 +65,7 @@
     <section id="hero">
         <div class="main">
             <div class="leftAlign">
-                <svg xmlns="http://www.w3.org/2000/svg" id="svg" width="600" height="140" viewBox="0 0 796 163">
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg" width="760" height="140" viewBox="0 0 1000 163">
                     <text id="main_heading" data-name="main heading" transform="translate(2 131)" fill="none"
                         stroke="#707070" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="2"
                         font-size="120" font-family="SegoeUI, Segoe UI">
@@ -414,6 +415,15 @@
 
         prevScrollPos = currentScrollPos;
     }
+
+    // theme switch
+    let themeBtn = document.querySelector(".themeSwitch");
+    console.log(themeBtn);
+    let body = window.document.body;
+    themeBtn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        themeBtn.classList.toggle("themeIcon");
+    })
 
 </script>
 
