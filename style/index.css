@@ -1,0 +1,635 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  /* 10px = 1rem */
+}
+
+/* navigation */
+#navbar {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 60px;
+  z-index: 100;
+  transition: 0.2s ease-in-out;
+}
+#logo {
+  font-size: 3.5rem;
+}
+
+#menu {
+  display: flex;
+  position: relative;
+}
+#menu li {
+  list-style-type: none;
+  padding: 10px 0px;
+}
+.dropdown {
+  border-top: 5px solid #263ec5;
+  z-index: 99;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 70px;
+  left: 95px;
+  width: 150px;
+  height: auto;
+  background-color: white;
+  margin: 5px 0px 0px 0px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 15px black;
+  padding-top: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.dropIt {
+  top: 38px;
+  visibility: visible;
+  opacity: 1;
+}
+.dropLink {
+  display: block;
+  margin: 8px 0px;
+  padding: 0px 10px !important;
+}
+#menu li:not(:last-child) {
+  margin-right: 4rem;
+}
+#menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  font-family: "Fira Sans", sans-serif;
+  padding: 10px 0px;
+}
+#menu li a i {
+  margin-left: 10px;
+}
+.hamburger {
+  padding: 5px;
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.ham {
+  width: 25px;
+  height: 1.8px;
+  background-color: black;
+  margin: 5px 0px;
+}
+
+.change .ham:nth-child(2) {
+  visibility: hidden;
+}
+
+/* side navigation */
+.sideNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* width: 70%; */
+  width: 0%;
+  overflow: hidden;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  background-color: rgb(21 29 93 / 93%);
+  z-index: 101;
+  transition: 0.3s width;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.close i {
+  color: #ffffff;
+}
+.openIt {
+  width: 70%;
+}
+.sideNavMenu {
+  list-style-type: none;
+}
+.sideNavItem {
+  /* border: 2px solid red; */
+  position: relative;
+  padding: 10px 0px;
+  margin: 15px 0px;
+}
+.sideNavItem:hover .sideNavDropdown {
+  top: 35px;
+  visibility: visible;
+  opacity: 1;
+}
+.sideNavItem a {
+  text-decoration: none;
+  font-size: 2.3rem;
+  font-family: "Fira Sans", sans-serif;
+  color: white;
+}
+.sideNavDropdown {
+  padding: 5px;
+  border-top: 5px solid #463afd;
+  border-radius: 5px;
+  position: absolute;
+  display: block;
+  top: 75px;
+  left: 26px;
+  background-color: white;
+  width: 110px;
+  box-shadow: 4px 4px 11px 0px #464646;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  z-index: 100;
+}
+.sideNavDropItem {
+  list-style-type: none;
+  padding: 4px 0px;
+}
+.sideNavDropItem a {
+  color: black;
+}
+
+/* hero section */
+#hero {
+  width: 100%;
+  height: 100vh;
+  padding-top: 80px;
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.leftAlign {
+  /* border: 2px solid green; */
+  height: auto;
+  width: 65%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.brandingOnMobile {
+  display: none;
+}
+.rightAlign {
+  /* border: 2px solid black; */
+  width: 35%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.heroImg {
+  /* border: 2px solid red; */
+  width: 110%;
+  height: 100%;
+}
+.heroBlob {
+  position: absolute;
+  /* border: 2px solid red; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  z-index: -1;
+}
+
+/* about us section */
+#aboutUS {
+  /* border: 2px solid green; */
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7.3rem 0rem;
+  overflow: hidden;
+}
+.aboutLeft {
+  /* border: 2px solid black; */
+  width: 50%;
+  height: 100%;
+}
+.aboutRight {
+  /* border: 2px solid green; */
+  width: 50%;
+  height: 100%;
+}
+.aboutUsImg {
+  /* border: 2px solid red; */
+  width: 75%;
+  position: relative;
+}
+.aboutUsBlob {
+  position: absolute;
+  width: 95%;
+  height: 120%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-62%, -46%);
+  z-index: -1;
+  /* border: 2px solid red; */
+}
+.aboutText {
+  display: flex;
+  /* border: 2px solid red; */
+  margin: 1.5rem 0rem;
+  padding: 1rem 0rem;
+}
+.aboutText i {
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.aboutText i:hover {
+  color: #253898;
+}
+.aboutDesc {
+  font-size: 2rem;
+  font-family: "Fira Sans", sans-serif;
+  color: #758283;
+}
+
+/* who we are section */
+#whoWeAre {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: auto;
+  padding: 7.3rem 0rem;
+  background-color: black;
+}
+.who {
+  display: grid;
+  place-content: center;
+}
+.who h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: "Fira Sans", sans-serif;
+  color: #758283;
+  text-align: center;
+  /* border: 2px solid red; */
+  margin-bottom: 2rem;
+}
+.who p {
+  font-size: 2rem;
+  font-family: "Fira Sans", sans-serif;
+  color: #758283;
+  text-align: center;
+}
+.who .describer {
+  font-size: 4rem;
+}
+
+/* our services section */
+#ourServices {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: auto;
+  padding: 7.3rem 0rem;
+}
+.servicesRack {
+  /* border: 2px solid red; */
+  max-width: 1080px;
+  padding: 0rem 2rem;
+  height: auto;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.serviceCard {
+  /* border: 2px solid red; */
+  width: 30rem;
+  height: 20.4rem;
+  padding: 1rem;
+  margin: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+}
+.serviceCard i {
+  /* border: 2px solid red; */
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+.serviceCard i::after {
+  content: "";
+  background-image: url(../images/lower.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  width: 108px;
+  height: 85px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: 2px solid red; */
+  z-index: -2;
+}
+.serviceCard h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-family: "Fira Sans", sans-serif;
+  color: #758283;
+}
+.serviceCard p {
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: "Fira Sans", sans-serif;
+  color: #758283;
+}
+
+/* our Clients section */
+#ourClient {
+  width: 100%;
+  height: auto;
+  padding: 2rem 0rem;
+  background-color: #cad5e2;
+}
+.clientsLogo {
+  width: 100%;
+  /* border: 2px solid red; */
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clientsLogo i {
+  display: inline-block;
+  margin: 1rem 0rem;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.clientsLogo i:not(:last-child) {
+  margin-right: 5rem;
+}
+
+/* testimonial section */
+#testimonial {
+  width: 100%;
+  height: auto;
+  padding: 7.3rem 0rem;
+  /* border: 2px solid red; */
+  position: relative;
+  overflow: hidden;
+}
+.blobLeft {
+  position: absolute;
+  top: 7.5rem;
+  left: -20.1rem;
+  /* border: 2px solid red; */
+  width: 30rem;
+}
+
+.blobRight {
+  position: absolute;
+  bottom: -4.6rem;
+  right: -14.8rem;
+  width: 30rem;
+  /* border: 2px solid red; */
+}
+.corousel {
+  /* border: 2px solid red; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.glider {
+  width: 30rem;
+  /* border: 2px solid green; */
+}
+.glider-contain {
+  width: 40rem !important;
+  /* border: 2px solid red; */
+  padding: 20px 0px;
+}
+.testi {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30rem !important;
+  padding: 10px;
+}
+.testiProfile {
+  width: 60px;
+  margin-bottom: 15px;
+}
+.testiName {
+  font-size: 2rem;
+  font-family: "Fira Sans", sans-serif;
+  color: #758283;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.testiFeedback {
+  font-size: 1.8rem;
+  font-family: "Fira Sans", sans-serif;
+  color: #758283;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.testi .testiSocail {
+  /* border: 2px solid red; */
+  padding: 8px;
+}
+.testi .testiSocail a {
+  text-decoration: none;
+  color: black;
+}
+.testiSocail a:not(:last-child) {
+  margin-right: 15px;
+}
+.testi i {
+  display: inline-block;
+}
+
+/* newsletter section */
+#newsLetter {
+  width: 100%;
+  height: auto;
+  padding: 7.3rem 0rem;
+  /* border: 2px solid red; */
+  position: relative;
+}
+.sectionDescription {
+  text-align: center;
+}
+/* newsletter form */
+#newsletterForm {
+  /* border: 2px solid red; */
+  display: flex;
+}
+#subscribeEmail {
+  font-size: 1.8rem;
+  font-family: "Fira Sans", sans-serif;
+  color: #758283;
+  padding: 10px;
+  border-radius: 19px;
+  outline: none;
+  width: 260px;
+  background: transparent;
+  border: 1px solid #758283;
+}
+#subscriberEmail:focus {
+  outline: none;
+  background: transparent;
+}
+.submitBtn {
+  margin-left: 20px;
+  background: transparent;
+  padding: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* contact us section */
+#contact {
+  width: 100%;
+  height: auto;
+  /* border: 2px solid red; */
+  padding: 7.3rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.descHead {
+  font-size: 4rem;
+  font-family: "Fira Sans", sans-serif;
+  color: #758283;
+  font-weight: 300;
+  /* border: 2px solid red; */
+  /* margin: 10px 0px; */
+}
+.growthImg {
+  /* border: 2px solid red; */
+  width: 100%;
+}
+
+/* footer section */
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #000080;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 3rem;
+}
+.footItem {
+  /* border: 2px solid red; */
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+}
+
+/* utility section starts */
+.main {
+  /* border: 2px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  padding: 0rem 14rem;
+}
+.bodyText {
+  font-size: 2rem;
+  font-family: "Fira Sans", sans-serif;
+  color: #758283;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+.btn {
+  /* border: 2px solid red; */
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 1.8rem 2.5rem;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.9rem;
+  background: linear-gradient(to right, #253898, #5737d6);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 5px 5px 15px 0px #538ffb;
+  /* margin-bottom: 20px; */
+}
+.sectionHeading {
+  font-size: 6rem;
+  font-family: "Fira Sans", sans-serif;
+  color: #758283;
+  margin: 1rem 0rem 5rem 0rem;
+  padding: 0.5rem 0rem;
+  text-align: center;
+  font-weight: 400;
+  /* border: 2px solid red; */
+}
+.footHeading {
+  font-size: 4rem;
+  font-family: "Fira Sans", sans-serif;
+  color: #758283;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.footPara {
+  font-size: 2rem;
+  font-family: "Fira Sans", sans-serif;
+  color: #758283;
+  margin-bottom: 1rem;
+}
+.footItem a {
+  text-decoration: none;
+  display: block;
+  color: #758283;
+  font-size: 2rem;
+  font-family: "Fira Sans", sans-serif;
+  margin-bottom: 1rem;
+  transition: 0.3s ease;
+}
+.footItem a:hover {
+  color: #cad5e2;
+}
+.socialLinks a {
+  display: inline-block;
+  padding: 5px;
+  width: auto;
+  /* border: 2px solid red; */
+  margin: 0.8rem;
+}
+/* utility section ends */

@@ -1,0 +1,181 @@
+/* for laptops - L */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 60%;
+  }
+  #svg {
+    width: 50rem;
+  }
+  .main {
+    padding: 0px 10rem;
+  }
+  .footItem {
+    width: 200px;
+  }
+}
+
+/* for tablets */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  #menu li a i {
+    margin-left: 2px;
+  }
+  #svg {
+    width: 50rem;
+  }
+  .main {
+    padding: 0px 6rem;
+  }
+  .bodyText {
+    margin-top: 3rem;
+  }
+  .footItem {
+    width: 178px;
+    margin: 0.1rem;
+  }
+}
+
+/* for Large mobile */
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 45%;
+  }
+  #menu {
+    display: none;
+    visibility: hidden;
+  }
+  #hero {
+    width: 100%;
+    height: 100vh;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+  #svg {
+    display: none;
+  }
+  .main {
+    padding: 0px 2rem;
+    /* border: 2px solid black; */
+    justify-content: center;
+  }
+  .brandingOnMobile {
+    display: block;
+    text-align: center;
+    font-size: 8.2rem;
+    font-weight: bold;
+    font-family: "Fira Sans", sans-serif;
+    color: #758283;
+  }
+  .leftAlign {
+    /* border: 2px solid green; */
+    /* height: auto; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .rightAlign {
+    /* border: 2px solid black; */
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .hamburger {
+    display: block;
+  }
+  #subscribeEmail {
+    width: 162px;
+  }
+  .submitBtn {
+    margin-left: 1rem;
+    background: transparent;
+    padding: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .sectionHeading {
+    margin: 1rem 0rem 3rem 0rem;
+  }
+  .aboutText {
+    display: flex;
+    /* border: 2px solid red; */
+    margin: 1rem 0rem;
+    padding: 1rem 0rem;
+  }
+  .aboutUsImg {
+    /* border: 2px solid red; */
+    width: 100%;
+  }
+  .aboutUsBlob {
+    width: 115%;
+    height: 140%;
+  }
+  .serviceCard {
+    /* border: 2px solid red; */
+    width: 26rem;
+    height: 27.4rem;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  .serviceCard i::after {
+    width: 80px;
+    height: 50px;
+  }
+  .mobileLeft {
+    width: 65% !important;
+  }
+  .bodyText {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+}
+
+/* for medium mobile */
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 45%;
+  }
+  .main {
+    flex-direction: column;
+  }
+  #aboutUs {
+    padding: 7.3rem 0rem;
+  }
+  .aboutLeft {
+    width: 75%;
+  }
+  .aboutUsBlob {
+    width: 122%;
+    height: 120%;
+    transform: translate(-50%, -50%);
+  }
+  .aboutRight {
+    width: 75%;
+    height: 100%;
+    margin-top: 25px;
+  }
+  .serviceCard {
+    width: 23rem;
+  }
+  .glider-contain {
+    width: 35rem !important;
+    padding: 20px 0px;
+  }
+  footer {
+    justify-content: flex-start;
+  }
+  .footItem {
+    padding: 7px;
+    margin: 1px;
+    width: 165px;
+  }
+}

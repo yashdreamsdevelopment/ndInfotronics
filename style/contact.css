@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 0mm;
+}
+.indicator {
+  margin-top: 80px;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  background: linear-gradient(to right, #253898, #5737d6);
+}
+.indicator .navigation {
+  /* border: 2px solid red; */
+  padding: 10px;
+  margin-left: 140px;
+}
+.navigation a {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Fira Sans", sans-serif;
+  color: #ffffff;
+}
+.navigation a:first-child {
+  margin-right: 16px;
+}
+.navigation i {
+  color: white;
+}
+.navigation a:last-child {
+  margin-left: 16px;
+}
+
+/* content section */
+.content {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 50px 140px;
+}
+.formBox {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.formBox form {
+  /* border: 2px solid green; */
+  padding: 30px;
+  border-radius: 30px;
+  width: 100%;
+  height: inherit;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
+.formlables {
+  font-size: 20px;
+  font-family: "Fira Sans", sans-serif;
+  color: #758283;
+  margin-bottom: 10px;
+}
+.inputfield {
+  padding: 10px;
+  border-radius: 9px;
+  border: 1px solid #758283;
+  outline: 0px;
+  font-size: 18px;
+  font-family: "Fira Sans", sans-serif;
+  color: #3e3f3f;
+  margin-bottom: 20px;
+}
+.inputfield:focus {
+  outline: none;
+}
+.map {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+}
