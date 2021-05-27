@@ -352,6 +352,7 @@ body {
   /* border: 2px solid red; */
   margin-bottom: 2.5rem;
   position: relative;
+  color: var(--black--);
 }
 .serviceCard i::after {
   content: "";
