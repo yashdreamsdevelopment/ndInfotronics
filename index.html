@@ -55,11 +55,13 @@
                     <li class="sideNavDropItem"><a href="#">Team</a></li>
                     <li class="sideNavDropItem"><a href="#">Products</a></li>
                     <li class="sideNavDropItem"><a href="#">Blogs</a></li>
+
                 </ul>
             </li>
             <li class="sideNavItem"><a href="#ourServices">Services</a></li>
             <li class="sideNavItem"><a href="#testimonial">Testimonial</a></li>
             <li class="sideNavItem"><a href="./contact.html">Contact Us</a></li>
+            <li class="sideNavItem"><a href=" javascript:void(0)"><i class="themeSwitchSmallDevices"></i></a></li>
         </ul>
     </aside>
 
@@ -424,6 +426,13 @@
     themeBtn.addEventListener("click", () => {
         body.classList.toggle("dark");
         themeBtn.classList.toggle("themeIcon");
+    })
+
+    // theme switch for small devices
+    let themeBtnSmallDevices = document.querySelector(".themeSwitchSmallDevices");
+    themeBtnSmallDevices.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        themeBtnSmallDevices.classList.toggle("themeIconSmallDevices");
     })
 
 </script>
