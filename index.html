@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <meta name="theme-name" content="#000">
+=======
+    <meta name="theme-color" content="#000">
+>>>>>>> darkMode
     <link rel="stylesheet" href="./style/index.css">
     <link rel="stylesheet" href="./style/media.css">
     <link rel="stylesheet" href="./Glider.js-master/glider.css">
@@ -34,6 +38,7 @@
             <li><a href="#ourServices">Services</a></li>
             <li><a href="#testimonial">Testimonial</a></li>
             <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href=" javascript:void(0)"><i class="themeSwitch"></i></a></li>
         </ul>
         <div class="hamburger" id="hamburger">
             <i class="fas fa-bars fa-3x"></i>
@@ -54,18 +59,20 @@
                     <li class="sideNavDropItem"><a href="#">Team</a></li>
                     <li class="sideNavDropItem"><a href="#">Products</a></li>
                     <li class="sideNavDropItem"><a href="#">Blogs</a></li>
+
                 </ul>
             </li>
             <li class="sideNavItem"><a href="#ourServices">Services</a></li>
             <li class="sideNavItem"><a href="#testimonial">Testimonial</a></li>
             <li class="sideNavItem"><a href="./contact.html">Contact Us</a></li>
+            <li class="sideNavItem"><a href=" javascript:void(0)"><i class="themeSwitchSmallDevices"></i></a></li>
         </ul>
     </aside>
 
     <section id="hero">
         <div class="main">
             <div class="leftAlign">
-                <svg xmlns="http://www.w3.org/2000/svg" id="svg" width="600" height="140" viewBox="0 0 796 163">
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg" width="760" height="140" viewBox="0 0 1000 163">
                     <text id="main_heading" data-name="main heading" transform="translate(2 131)" fill="none"
                         stroke="#707070" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="2"
                         font-size="120" font-family="SegoeUI, Segoe UI">
@@ -415,6 +422,22 @@
 
         prevScrollPos = currentScrollPos;
     }
+
+    // theme switch
+    let themeBtn = document.querySelector(".themeSwitch");
+    console.log(themeBtn);
+    let body = window.document.body;
+    themeBtn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        themeBtn.classList.toggle("themeIcon");
+    })
+
+    // theme switch for small devices
+    let themeBtnSmallDevices = document.querySelector(".themeSwitchSmallDevices");
+    themeBtnSmallDevices.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        themeBtnSmallDevices.classList.toggle("themeIconSmallDevices");
+    })
 
 </script>
 
