@@ -13,7 +13,7 @@
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
-    <title>ND Infotrics | where ideas meet reality</title>
+    <title>ND Infotronics | where ideas meet reality</title>
 </head>
 
 <body>
@@ -23,14 +23,16 @@
         </h1>
         <ul id="menu">
             <li><a href="#hero">Home</a></li>
-            <li class="link" id="link"><a href="#">About <i class="fas fa-chevron-down"></i></a></li>
-            <ul class="dropdown" id="dropdown">
-                <li class="dropLink"><a href="#aboutUs">About Us</a></li>
-                <li class="dropLink"><a href="#ourClient">Clients</a></li>
-                <li class="dropLink"><a href="#">Team</a></li>
-                <li class="dropLink"><a href="#">Products</a></li>
-                <li class="dropLink"><a href="#">Blogs</a></li>
-            </ul>
+            <li class="link" id="link">
+                <a href="javascript:void(0)">About <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown" id="dropdown">
+                    <li class="dropLink"><a href="#aboutUs">About Us</a></li>
+                    <li class="dropLink"><a href="#ourClient">Clients</a></li>
+                    <li class="dropLink"><a href="#">Team</a></li>
+                    <li class="dropLink"><a href="#">Products</a></li>
+                    <li class="dropLink"><a href="#">Blogs</a></li>
+                </ul>
+            </li>
             <li><a href="#ourServices">Services</a></li>
             <li><a href="#testimonial">Testimonial</a></li>
             <li><a href="./contact.html">Contact Us</a></li>
@@ -374,17 +376,6 @@
                 next: '.glider-next'
             }
         })
-    })
-
-    let link = document.getElementById("link");
-    let dropdown = document.getElementById("dropdown");
-
-    link.addEventListener("click", () => {
-        dropdown.classList.toggle("dropIt");
-    })
-
-    dropdown.addEventListener("focusout", () => {
-        dropdown.classList.remove("dropIt");
     })
 
 
