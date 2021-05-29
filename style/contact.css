@@ -5,6 +5,8 @@
 }
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
+  /* 10px = 1rem */
 }
 .indicator {
   margin-top: 80px;
@@ -24,7 +26,7 @@ html {
 }
 .navigation a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 2rem;
   font-family: "Fira Sans", sans-serif;
   color: #ffffff;
 }
@@ -74,7 +76,7 @@ html {
   align-content: center;
 }
 .formlables {
-  font-size: 20px;
+  font-size: 2rem;
   font-family: "Fira Sans", sans-serif;
   color: #758283;
   margin-bottom: 10px;
@@ -82,15 +84,20 @@ html {
 .inputfield {
   padding: 10px;
   border-radius: 9px;
+  background: transparent;
   border: 1px solid #758283;
   outline: 0px;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-family: "Fira Sans", sans-serif;
-  color: #3e3f3f;
+  color: var(--text-color--);
   margin-bottom: 20px;
 }
 .inputfield:focus {
   outline: none;
+}
+.inputfield option {
+  color: var(--text-color--);
+  background: transparent;
 }
 .map {
   /* border: 2px solid red; */
@@ -123,5 +130,51 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(20%, -50%);
+  }
+  .footItem {
+    width: 178px;
+    margin: 0.1rem;
+  }
+}
+
+/* for large mobile */
+@media screen and (max-width: 456px) {
+  html {
+    font-size: 45%;
+  }
+  .indicator .navigation {
+    margin-left: 20px;
+  }
+  #menu {
+    display: none;
+    visibility: hidden;
+  }
+  .hamburger {
+    display: block;
+  }
+  .content {
+    padding: 50px 20px;
+    /* border: 2px solid red; */
+  }
+  iframe {
+    display: none;
+  }
+}
+
+/* for medium mobile */
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 45%;
+  }
+  .formBox form {
+    padding: 20px;
+  }
+  footer {
+    justify-content: flex-start;
+  }
+  .footItem {
+    padding: 7px;
+    margin: 1px;
+    width: 165px;
   }
 }

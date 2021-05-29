@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/index.css">
     <link rel="stylesheet" href="./style/contact.css">
+    <!-- <link rel="stylesheet" href="./style/media.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
-    <title>ND Infotrics | contact us</title>
+    <title>ND Infotronics | contact us</title>
 
 </head>
 
@@ -41,6 +42,29 @@
             <i class="fas fa-bars fa-3x"></i>
         </div>
     </nav>
+    <aside class="sideNav" id="sideNav">
+        <div class="close" id="closeBtn">
+            <i class="fas fa-times fa-3x"></i>
+        </div>
+        <ul class="sideNavMenu">
+            <li class="sideNavItem"><a href="#">Home</a></li>
+            <li class="sideNavItem">
+                <a href="javascript:void(0)">About <i class="fas fa-chevron-down"></i></a>
+                <ul class="sideNavDropdown">
+                    <li class="sideNavDropItem"><a href="#aboutUs">About Us</a></li>
+                    <li class="sideNavDropItem"><a href="#ourClient">Clients</a></li>
+                    <li class="sideNavDropItem"><a href="#">Team</a></li>
+                    <li class="sideNavDropItem"><a href="#">Products</a></li>
+                    <li class="sideNavDropItem"><a href="#">Blogs</a></li>
+
+                </ul>
+            </li>
+            <li class="sideNavItem"><a href="#ourServices">Services</a></li>
+            <li class="sideNavItem"><a href="#testimonial">Testimonial</a></li>
+            <li class="sideNavItem"><a href="./contact.html">Contact Us</a></li>
+            <li class="sideNavItem"><a href=" javascript:void(0)"><i class="themeSwitchSmallDevices"></i></a></li>
+        </ul>
+    </aside>
 
     <div id="indicator" class="indicator">
         <div class="navigation">
@@ -72,6 +96,7 @@
                     <option value="Graphic Design">Graphic Design</option>
                     <option value="Electronic Projects">Electronic Projects</option>
                     <option value="IOT Gadgets">IOT Gadgets</option>
+                    <option value="other">Other</option>
                 </select>
 
                 <label for="message" class="formlables">Message:</label>
@@ -123,5 +148,7 @@
 </body>
 
 <script defer src="./js/sideNavigation.js"></script>
+<script defer src="./js/themeSwitch.js"></script>
+<script defer src="./js/navigation.js"></script>
 
 </html>

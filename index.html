@@ -352,9 +352,11 @@
 
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script defer src="./Glider.js-master/glider.js"></script>
 <script defer src="./js/sideNavigation.js"></script>
+<script defer src="./js/themeSwitch.js"></script>
+<script defer src="./js/navigation.js"></script>
 
 <script>
     var typed = new Typed('.typed', {
@@ -376,40 +378,6 @@
                 next: '.glider-next'
             }
         })
-    })
-
-
-
-    /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-    let navbar = document.getElementById("navbar");
-    let prevScrollPos = window.pageYOffset;
-
-    window.onscroll = function () {
-        let currentScrollPos = window.pageYOffset;
-
-        if (prevScrollPos > currentScrollPos) {
-            navbar.style.top = "0px";
-        } else {
-            navbar.style.top = "-80px";
-        }
-
-        prevScrollPos = currentScrollPos;
-    }
-
-    // theme switch
-    let themeBtn = document.querySelector(".themeSwitch");
-    console.log(themeBtn);
-    let body = window.document.body;
-    themeBtn.addEventListener("click", () => {
-        body.classList.toggle("dark");
-        themeBtn.classList.toggle("themeIcon");
-    })
-
-    // theme switch for small devices
-    let themeBtnSmallDevices = document.querySelector(".themeSwitchSmallDevices");
-    themeBtnSmallDevices.addEventListener("click", () => {
-        body.classList.toggle("dark");
-        themeBtnSmallDevices.classList.toggle("themeIconSmallDevices");
     })
 
 </script>
