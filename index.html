@@ -351,7 +351,8 @@
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script src="./Glider.js-master/glider.js"></script>
+<script defer src="./Glider.js-master/glider.js"></script>
+<script defer src="./js/sideNavigation.js"></script>
 
 <script>
     var typed = new Typed('.typed', {
@@ -386,22 +387,7 @@
         dropdown.classList.remove("dropIt");
     })
 
-    // script for side navigation
-    let hamburger = document.getElementById("hamburger");
-    let sideNav = document.getElementById("sideNav");
-    let closeBtn = document.getElementById("closeBtn");
 
-    hamburger.addEventListener("click", () => {
-        sideNav.classList.toggle("openIt");
-    })
-
-    sideNav.addEventListener("focusout", () => {
-        sideNav.classList.remove("openIt");
-    })
-
-    closeBtn.addEventListener("click", () => {
-        sideNav.classList.toggle("openIt");
-    })
 
     /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
     let navbar = document.getElementById("navbar");

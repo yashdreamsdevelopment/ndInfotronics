@@ -22,17 +22,28 @@
         </h1>
         <ul id="menu">
             <li><a href="#hero">Home</a></li>
-            <li><a href="#aboutUS" class="link">About <i class="fas fa-chevron-down"></i></a></li>
+            <li class="link" id="link"><a href="#">About <i class="fas fa-chevron-down"></i></a></li>
+            <ul class="dropdown" id="dropdown">
+                <li class="dropLink"><a href="#aboutUs">About Us</a></li>
+                <li class="dropLink"><a href="#ourClient">Clients</a></li>
+                <li class="dropLink"><a href="#">Team</a></li>
+                <li class="dropLink"><a href="#">Products</a></li>
+                <li class="dropLink"><a href="#">Blogs</a></li>
+            </ul>
             <li><a href="#ourServices">Services</a></li>
             <li><a href="#testimonial">Testimonial</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href=" javascript:void(0)"><i class="themeSwitch"></i></a></li>
         </ul>
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars fa-3x"></i>
+        </div>
     </nav>
 
     <div id="indicator" class="indicator">
         <div class="navigation">
             <a href="./index.html" class="linkItem">Home</a>
-            <i class="fas fa-chevron-right"></i>
+            <i class="fas fa-chevron-right fa-2x"></i>
             <a href="" class="linkItem" aria-disabled="true" disabled>Contact Us</a>
 
         </div>
@@ -40,7 +51,7 @@
 
     <section id="content" class="content">
         <div class="formBox">
-            <form action="" method="POST">
+            <form action="#" method="POST">
                 <label for="name" class="formlables">Name:</label>
                 <input type="text" class="inputfield" id="name" placeholder="Enter your name">
 
@@ -108,5 +119,7 @@
         </div>
     </footer>
 </body>
+
+<script defer src="./js/sideNavigation.js"></script>
 
 </html>
